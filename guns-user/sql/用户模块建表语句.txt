@@ -1,21 +1,21 @@
 DROP TABLE IF EXISTS mooc_user_t;
 CREATE TABLE mooc_user_t(
-   UUID INT PRIMARY KEY AUTO_INCREMENT COMMENT 'Ö÷¼ü±àºÅ',
-   user_name VARCHAR(50) COMMENT 'ÓÃ»§ÕËºÅ',
-   user_pwd VARCHAR(50) COMMENT 'ÓÃ»§ÃÜÂë',
-   nick_name VARCHAR(50) COMMENT 'ÓÃ»§êÇ³Æ',
-   user_sex INT COMMENT 'ÓÃ»§ĞÔ±ğ 0-ÄĞ£¬1-Å®',
-   birthday VARCHAR(50) COMMENT '³öÉúÈÕÆÚ',
-   email VARCHAR(50) COMMENT 'ÓÃ»§ÓÊÏä',
-   user_phone VARCHAR(50) COMMENT 'ÓÃ»§ÊÖ»úºÅ',
-   address VARCHAR(50) COMMENT 'ÓÃ»§×¡Ö·',
-   head_url VARCHAR(50) COMMENT 'Í·ÏñURL',
-   biography VARCHAR(200) COMMENT '¸öÈË½éÉÜ',
-   life_state INT COMMENT 'Éú»î×´Ì¬ 0-µ¥Éí£¬1-ÈÈÁµÖĞ£¬2-ÒÑ»é£¬3-ÎªÈË¸¸Ä¸',
-   begin_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '´´½¨Ê±¼ä',
-   update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'ĞŞ¸ÄÊ±¼ä'
-) COMMENT 'ÓÃ»§±í' ENGINE = INNODB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+   UUID INT PRIMARY KEY AUTO_INCREMENT COMMENT 'ä¸»é”®ç¼–å·',
+   user_name VARCHAR(50) COMMENT 'ç”¨æˆ·è´¦å·',
+   user_pwd VARCHAR(50) COMMENT 'ç”¨æˆ·å¯†ç ',
+   nick_name VARCHAR(50) COMMENT 'ç”¨æˆ·æ˜µç§°',
+   user_sex INT COMMENT 'ç”¨æˆ·æ€§åˆ« 0-ç”·ï¼Œ1-å¥³',
+   birthday VARCHAR(50) COMMENT 'å‡ºç”Ÿæ—¥æœŸ',
+   email VARCHAR(50) COMMENT 'ç”¨æˆ·é‚®ç®±',
+   user_phone VARCHAR(50) COMMENT 'ç”¨æˆ·æ‰‹æœºå·',
+   address VARCHAR(50) COMMENT 'ç”¨æˆ·ä½å€',
+   head_url VARCHAR(50) COMMENT 'å¤´åƒURL',
+   biography VARCHAR(200) COMMENT 'ä¸ªäººä»‹ç»',
+   life_state INT COMMENT 'ç”Ÿæ´»çŠ¶æ€ 0-å•èº«ï¼Œ1-çƒ­æ‹ä¸­ï¼Œ2-å·²å©šï¼Œ3-ä¸ºäººçˆ¶æ¯',
+   begin_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'åˆ›å»ºæ—¶é—´',
+   update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'ä¿®æ”¹æ—¶é—´'
+) COMMENT 'ç”¨æˆ·è¡¨' ENGINE = INNODB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
-insert into mooc_user_t(user_name,user_pwd,nick_name,user_sex,birthday,email,user_phone,address,head_url,life_state,biography) values('admin','0192023a7bbd73250516f069df18b500','¸ô±ÚÌ©É½',0,'2018-07-31','admin@mooc.com','13888888888','±±¾©ÊĞº£µíÇø³¯Ñô±±Â·ÖĞÄÏº£¹ú±ö¹İ','films/img/head-img.jpg',0,'Ã»ÓĞºÏÊÊµÄÉ¡£¬ÎÒÄş¿ÉÁÜ×ÅÓê');
-insert into mooc_user_t(user_name,user_pwd,nick_name,user_sex,birthday,email,user_phone,address,head_url,life_state,biography) values('jiangzh','5e2de6bd1c9b50f6e27d4e55da43b917','°¢ÀïÀÉ',0,'2018-08-20','jiangzh@mooc.com','13866666666','±±¾©ÊĞ³¯ÑôÇø´óÍûÂ·Íò´ï¹ã³¡','films/img/head-img.jpg',1,'ÎÒÏ²»¶¸ô±ÚÌ©É½');
+insert into mooc_user_t(user_name,user_pwd,nick_name,user_sex,birthday,email,user_phone,address,head_url,life_state,biography) values('admin','0192023a7bbd73250516f069df18b500','éš”å£æ³°å±±',0,'2018-07-31','admin@mooc.com','13888888888','åŒ—äº¬å¸‚æµ·æ·€åŒºæœé˜³åŒ—è·¯ä¸­å—æµ·å›½å®¾é¦†','films/img/head-img.jpg',0,'æ²¡æœ‰åˆé€‚çš„ä¼ï¼Œæˆ‘å®å¯æ·‹ç€é›¨');
+insert into mooc_user_t(user_name,user_pwd,nick_name,user_sex,birthday,email,user_phone,address,head_url,life_state,biography) values('jiangzh','5e2de6bd1c9b50f6e27d4e55da43b917','é˜¿é‡Œéƒ',0,'2018-08-20','jiangzh@mooc.com','13866666666','åŒ—äº¬å¸‚æœé˜³åŒºå¤§æœ›è·¯ä¸‡è¾¾å¹¿åœº','films/img/head-img.jpg',1,'æˆ‘å–œæ¬¢éš”å£æ³°å±±');
 
